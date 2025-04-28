@@ -45,7 +45,7 @@ int main(void){
 
 ##OUTPUT
 
-![alt text](image.png)
+
 
 
 
@@ -85,7 +85,7 @@ int main(){
 
 ##OUTPUT
 
-![alt text](image-1.png)
+
 
 
 
@@ -134,7 +134,7 @@ int main()
 
 
 
-![alt text](image-2.png)
+
 
 
 
