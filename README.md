@@ -43,16 +43,6 @@ int main(void){
 
 
 
-
-
-
-
-
-
-
-
-
-
 ##OUTPUT
 
 ![alt text](image.png)
@@ -60,20 +50,31 @@ int main(void){
 
 
 
-
-
-
-
-
-
-
-
 ## C Program to create new process using Linux API system calls fork() and exit()
 
 
+```c
+#include <stdio.h>
+#include<stdlib.h>
+#include <unistd.h> 
 
+int main(){ 
+    int pid; 
+    pid=fork(); 
+    if(pid == 0) { 
+        printf("I am child my pid is %d\n",getpid()); 
+        printf("My parent pid is:%d\n",getppid()); 
+        exit(0); 
+    } 
+    else { 
+        printf("I am parent, my pid is %d\n",getpid()); 
+        sleep(100); 
+        exit(0);   
+    }
+    return 0; 
+}
 
-
+```
 
 
 
@@ -84,7 +85,7 @@ int main(void){
 
 ##OUTPUT
 
-
+![alt text](image-1.png)
 
 
 
@@ -95,12 +96,19 @@ int main(void){
 
 
 
+```c
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Running ps with execlp\n");
+	execlp("ps", "ps", "ax", NULL);
+	printf("Done.\n");
+	exit(0);
+}
 
-
-
-
-
-
+```
 
 
 
@@ -126,7 +134,7 @@ int main(void){
 
 
 
-
+![alt text](image-2.png)
 
 
 
